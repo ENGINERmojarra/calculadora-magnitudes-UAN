@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FisioCalc - Calculadora Física</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+     <img src="Logo_de_la_Universidad_Antonio_Nariño.svg" alt="Logo UAN" class="logo-uan">
+
+    <h1>FisioCalc – Calculadora de Magnitudes Físicas</h1>
+    <p>Desarrollado por: [sebastian jimenez]</p>
+  </header>
+  
+  <main>
+    <section class="calc" id="velocidad">
+      <h2>Velocidad (v = d / t)</h2>
+      <label>Distancia (m): <input type="number" id="distancia"></label>
+      <label>Tiempo (s): <input type="number" id="tiempo"></label>
+      <button onclick="calcularVelocidad()">Calcular</button>
+      <p class="resultado" id="resultadoVelocidad"></p>
+    </section>
+
+    <section class="calc" id="aceleracion">
+      <h2>Aceleración (a = Δv / Δt)</h2>
+      <label>Δv (m/s): <input type="number" id="deltaV"></label>
+      <label>Δt (s): <input type="number" id="deltaT"></label>
+      <button onclick="calcularAceleracion()">Calcular</button>
+      <p class="resultado" id="resultadoAceleracion"></p>
+    </section>
+
+    <section class="calc" id="fuerza">
+      <h2>Fuerza (F = m × a)</h2>
+      <label>Masa (kg): <input type="number" id="masaFuerza"></label>
+      <label>Aceleración (m/s²): <input type="number" id="aceleracionFuerza"></label>
+      <button onclick="calcularFuerza()">Calcular</button>
+      <p class="resultado" id="resultadoFuerza"></p>
+    </section>
+
+    <section class="calc" id="trabajo">
+      <h2>Trabajo (W = F × d × cos(θ))</h2>
+      <label>Fuerza (N): <input type="number" id="fuerzaTrabajo"></label>
+      <label>Distancia (m): <input type="number" id="distanciaTrabajo"></label>
+      <label>Ángulo θ (grados): <input type="number" id="anguloTrabajo"></label>
+      <button onclick="calcularTrabajo()">Calcular</button>
+      <p class="resultado" id="resultadoTrabajo"></p>
+    </section>
+
+    <section class="calc" id="energiaCinetica">
+      <h2>Energía Cinética (K = ½ × m × v²)</h2>
+      <label>Masa (kg): <input type="number" id="masaCinetica"></label>
+      <label>Velocidad (m/s): <input type="number" id="velocidadCinetica"></label>
+      <button onclick="calcularEnergiaCinetica()">Calcular</button>
+      <p class="resultado" id="resultadoEnergiaCinetica"></p>
+    </section>
+
+    <section class="calc" id="energiaPotencial">
+      <h2>Energía Potencial Gravitatoria (U = m × g × h)</h2>
+      <label>Masa (kg): <input type="number" id="masaPotencial"></label>
+      <label>Altura (m): <input type="number" id="alturaPotencial"></label>
+      <button onclick="calcularEnergiaPotencial()">Calcular</button>
+      <p class="resultado" id="resultadoEnergiaPotencial"></p>
+    </section>
+
+    <section class="calc" id="densidad">
+      <h2>Densidad (ρ = m / V)</h2>
+      <label>Masa (kg): <input type="number" id="masaDensidad"></label>
+      <label>Volumen (m³): <input type="number" id="volumenDensidad"></label>
+      <button onclick="calcularDensidad()">Calcular</button>
+      <p class="resultado" id="resultadoDensidad"></p>
+    </section>
+
+    <section class="calc" id="presion">
+      <h2>Presión (P = F / A)</h2>
+      <label>Fuerza (N): <input type="number" id="fuerzaPresion"></label>
+      <label>Área (m²): <input type="number" id="areaPresion"></label>
+      <button onclick="calcularPresion()">Calcular</button>
+      <p class="resultado" id="resultadoPresion"></p>
+    </section>
+
+    <section class="calc" id="carga">
+      <h2>Carga Eléctrica (q = I × t)</h2>
+      <label>Corriente (A): <input type="number" id="corrienteCarga"></label>
+      <label>Tiempo (s): <input type="number" id="tiempoCarga"></label>
+      <button onclick="calcularCarga()">Calcular</button>
+      <p class="resultado" id="resultadoCarga"></p>
+    </section>
+
+    <section class="calc" id="ohm">
+      <h2>Ley de Ohm (V = I × R)</h2>
+      <label>Corriente (A): <input type="number" id="corrienteOhm"></label>
+      <label>Resistencia (Ω): <input type="number" id="resistenciaOhm"></label>
+      <button onclick="calcularOhm()">Calcular</button>
+      <p class="resultado" id="resultadoOhm"></p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
